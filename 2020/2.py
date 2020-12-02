@@ -1,5 +1,6 @@
 data = [x for x in open('data/2.in').read().split('\n')]
 
+
 def valid_password(x):
     count_part, letter_part, password = x.split(' ')
     min_count, max_count = [int(x) for x in count_part.split('-')]
@@ -13,6 +14,7 @@ def actually_valid_password(x):
     letter = letter_part[0]
 
     return (letter == password[first_pos]) is not (letter == password[second_pos])
+
 
 def part_1():
     return sum([valid_password(x) for x in data])

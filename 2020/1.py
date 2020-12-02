@@ -16,5 +16,4 @@ def part_2():
             return math.prod(x)
 
 
-print(part_1())
-print(part_2())
+print(f'{part_1()} - {part_2()}')
