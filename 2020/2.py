@@ -3,9 +3,8 @@ data = [x for x in open('data/2.in').read().split('\n')]
 def valid_password(x):
     count_part, letter_part, password = x.split(' ')
     min_count, max_count = [int(x) for x in count_part.split('-')]
-    letter = letter_part[0]
 
-    return min_count <= password.count(letter) <= max_count
+    return min_count <= password.count(letter_part[0]) <= max_count
 
 
 def actually_valid_password(x):
